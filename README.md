@@ -1,2 +1,2 @@
 # ProyectoOrganizedChaos
-Lemme do that thing
+Proyecto realizado por los alumnos Andrés Márquez y Darío Fernandez
