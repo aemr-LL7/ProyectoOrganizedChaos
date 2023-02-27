@@ -37,10 +37,13 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Main extends javax.swing.JFrame {
 
-    public ListWarehouse ListWarehouse = new ListWarehouse();
-    public ListProduct ListProduct = new ListProduct();
-    public ListStock ListStock = new ListStock();
-    public ListRoute ListRoute = new ListRoute();
+    /**
+     *
+     */
+    public static ListWarehouse ListWarehouse = new ListWarehouse();
+    public static ListProduct ListProduct = new ListProduct();
+    public static ListStock ListStock = new ListStock();
+    public static ListRoute ListRoute = new ListRoute();
 
     /**
      * Creates new form Main1
@@ -494,12 +497,22 @@ public class Main extends javax.swing.JFrame {
                 f_StockWarehouseFocusGained(evt);
             }
         });
+        f_StockWarehouse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                f_StockWarehouseActionPerformed(evt);
+            }
+        });
 
         LabelWarehouse4.setText("Warehouse:");
 
         f_StockProduct.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 f_StockProductFocusGained(evt);
+            }
+        });
+        f_StockProduct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                f_StockProductActionPerformed(evt);
             }
         });
 
@@ -533,6 +546,11 @@ public class Main extends javax.swing.JFrame {
         AddProduct.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AddProductMouseClicked(evt);
+            }
+        });
+        AddProduct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddProductActionPerformed(evt);
             }
         });
 
@@ -614,6 +632,11 @@ public class Main extends javax.swing.JFrame {
         });
 
         Transaction.setText("Realizar Pedido");
+        Transaction.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TransactionActionPerformed(evt);
+            }
+        });
 
         ExitProgram.setText("Exit");
         ExitProgram.addActionListener(new java.awt.event.ActionListener() {
@@ -1205,6 +1228,23 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(WIDTH);
     }//GEN-LAST:event_ExitProgramActionPerformed
+
+    private void f_StockWarehouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_StockWarehouseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_f_StockWarehouseActionPerformed
+
+    private void f_StockProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_StockProductActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_f_StockProductActionPerformed
+
+    private void TransactionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TransactionActionPerformed
+        Orders factura = new Orders();
+        factura.setVisible(true);
+    }//GEN-LAST:event_TransactionActionPerformed
+
+    private void AddProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddProductActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AddProductActionPerformed
 
     /**
      * @param args the command line arguments
